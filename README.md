@@ -265,6 +265,13 @@ This graph show which hospital have more profit. It allows us to know that it is
 
 ![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/0493b890-ca5d-4e34-b605-bc029c10c368)
 
+### Suggest Analyse
+
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/6b2225d4-cf72-4d25-8121-09a7c388b596)
+
+### Final Result
+
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/c31041a2-2218-40e9-9d23-8d835d8ed88f)
 
 
 
