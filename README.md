@@ -184,3 +184,31 @@ Please evaluate below IAM policies
 
 - How would the policy restrict the access granted to you by this additional statement?
 - If the policy included both the statement on the left and the statement in question 2, could you terminate an m3.xlarge instance that existed in the account?
+
+
+
+# Big Data - Data Visualization With AWS QuickSight
+
+### Sum of Cost by category and Admit Date
+We add filter in order to have an analyse between 2017 and 2018. We also remove unnecessary category
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/935c20cc-8c80-41da-be1c-939e75172ab5)
+
+### Sum of Revenue/Profit by Admit Date
+The graph is focused on the anomalie at déc. 3, 2018 12:00am
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/163d0028-45ef-4640-b97c-d7c357fcd835)
+
+We compare the difference of revenue and profit between 2018 and 2017. There is a positive revenue and a negative profit, we can deduce than 2018 charges and outcome is much highger than 2017 
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/d30b76c7-794d-410c-8a62-316101019023)
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/2619411b-a160-4bde-bd25-5ed0152086dd)
+
+### Sum of Profit by Hospital
+This graph show which hospital have more profit. It allows us to know that it is necessary to create a better balance between hospital in order to split the profit.
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/e65ece09-a2a6-418b-b936-e7325eae94ef)
+
+### Sum of Discount ans Sum of Profit by Category and Admit Date
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/0493b890-ca5d-4e34-b605-bc029c10c368)
+
+
+
+
+
