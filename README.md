@@ -34,6 +34,23 @@ Please evaluate below IAM policies
 }
 ```
 
+## IAM Quizz Part
+
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/bf14b1d2-b867-4092-9885-f75aca378d30)
+
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/b20b9165-15c4-442f-bc23-96b4034d356e)
+
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/62971dc2-7da0-431d-884e-ee6aee9d6990)
+
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/60417f2c-facf-4fc4-8fcf-fd778ab4b6d7)
+
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/75278597-d2d8-4548-8955-2c9e2445c604)
+
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/75f5fc26-c8e0-491c-ad5c-93c91bfb4bbf)
+
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/89dab3b5-4a39-45d6-bfbc-3ada1f310412)
+
+
 ### Question: What actions are allowed for EC2 instances and S3 objects based on this policy? What specific resources are included?
 
 ```json
