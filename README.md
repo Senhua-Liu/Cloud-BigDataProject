@@ -6,34 +6,6 @@ For example if the first option is the correct answer, say **Option 1**
 
 # IAM
 
-This part is to make sure you are able to evaluate and apply some policy constraintes.
-
-## Policies evaluation
-
-Please evaluate below IAM policies
-
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "AllowEC2AndS3",
-      "Effect": "Allow",
-      "Action": [
-        "ec2:RunInstances",
-        "ec2:TerminateInstances",
-        "s3:GetObject",
-        "s3:PutObject"
-      ],
-      "Resource": [
-        "arn:aws:ec2:us-east-1:123456789012:instance/*",
-        "arn:aws:s3:::example-bucket/*"
-      ]
-    }
-  ]
-}
-```
-
 ## IAM Quizz Part
 
 ![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/bf14b1d2-b867-4092-9885-f75aca378d30)
@@ -61,6 +33,34 @@ Please evaluate below IAM policies
 
 ![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/1dc0ae69-c952-4420-8653-f9658b9277d3)
 
+
+This part is to make sure you are able to evaluate and apply some policy constraintes.
+
+## Policies evaluation
+
+Please evaluate below IAM policies
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowEC2AndS3",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:RunInstances",
+        "ec2:TerminateInstances",
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "Resource": [
+        "arn:aws:ec2:us-east-1:123456789012:instance/*",
+        "arn:aws:s3:::example-bucket/*"
+      ]
+    }
+  ]
+}
+```
 
 ### Question: What actions are allowed for EC2 instances and S3 objects based on this policy? What specific resources are included?
 
@@ -110,6 +110,12 @@ Please evaluate below IAM policies
   ]
 }
 ```
+Under this policy the access to the VPC-related information is allowed based on the condition "aws:RequestedRegion" which is quite similar to the "us-west-2". This means that the policy only permits VPC-related actions if the API request is made in the designated "us-west-2" AWS region.
+Actions allowed for VPC-related information:
+ec2:DescribeVpcs: Allows describing VPCs.
+ec2:DescribeSubnets: Allows describing subnets.
+ec2:DescribeSecurityGroups: Allows describing security groups.
+The specified region is "us-west-2". Therefore, this policy will only allow access to VPC-related information when the API request is made in the right "us-west-2" region.
 
 ### Question: What actions are allowed on the "example-bucket" and its objects based on this policy? What specific prefixes are specified in the condition?
 
@@ -132,6 +138,13 @@ Please evaluate below IAM policies
   ]
 }
 ```
+Actions allowed for user creation:
+iam:CreateUser: Allows creating IAM users.
+Actions allowed for user deletion:
+iam:DeleteUser: Allows deleting IAM users.
+Specific resources:
+"Resource": "arn:aws:iam::123456789012:user/${aws:username}": This policy allows the specified actions (iam:CreateUser and iam:DeleteUser) on the IAM user identified by "arn:aws:iam::123456789012:user/${aws:username}". The ${aws:username} serves as a proxy that will be replaced with the actual username of the user making the API request.
+This policy allows the creation and deletion of IAM users. The allowed actions are limited to user management within the specified AWS account (123456789012), with the specific IAM user being determined by the requesting user's username.
 
 ### Question: What actions are allowed for IAM users based on this policy? How are the resource ARNs constructed?
 
@@ -145,6 +158,21 @@ Please evaluate below IAM policies
   }
 }
 ```
+{
+  "Version": "2012-10-17",
+  "Statement": {
+    "Effect": "Allow",
+    "Action": ["iam:Get*", "iam:List*"],
+    "Resource": "*"
+  }
+}
+Actions allowed for IAM users:
+iam:Get*: Allows IAM users to perform any Get action in IAM, such as iam:GetUser, iam:GetGroup, etc. This action is used to get information about IAM entities and resources.
+iam:List*: Allows IAM users to perform any List action in IAM, such as iam:ListUsers, iam:ListGroups, etc. This action is used to list information about IAM entities and resources.
+Resource:
+"Resource": "*": This policy allows the specified actions (iam:Get* and iam:List*) on any resource that is located in the AWS account. 
+In summary, the policy grants IAM users the ability to retrieve and list information about IAM entities and resources within the AWS account. 
+
 
 ### Questions:
 
