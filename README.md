@@ -61,6 +61,13 @@ Please evaluate below IAM policies
   ]
 }
 ```
+This Policy grants permissions that are required to allow EC2 and S3 to do actions according to the courses that are specified. 
+Sid: "AllowEC2AndS3": It is a custom identifier.
+Effect: "Allow": Specifies that the actions listed are allowed so it basically grants permissions.
+Actions: "ec2:RunInstances", "ec2:TerminateInstances", "s3:GetObject", "s3:PutObject": These are the actions that are allowed by the policy. It allows running and terminating EC2 instances, as well as retrieving and uploading objects to an S3 bucket.
+Resource: "arn:aws:ec2:us-east-1:123456789012:instance/", "arn:aws:s3:::example-bucket/": Specifies the resources to which the actionswill  apply. The policy allows actions on any EC2 instances in the AWS account located in the region (us-east-1), as well as any objects within the "example-bucket" S3 bucket.
+
+
 
 ### Question: What actions are allowed for EC2 instances and S3 objects based on this policy? What specific resources are included?
 
@@ -86,7 +93,13 @@ Please evaluate below IAM policies
   ]
 }
 ```
+Actions allowed for EC2 instances:
 
+ec2:DescribeVpcs: Allows describing VPCs.
+ec2:DescribeSubnets: Allows describing subnets.
+ec2:DescribeSecurityGroups: Allows describing security groups.
+Specific resources included:
+"Resource": "*": This policy allows the specified actions (ec2:DescribeVpcs, ec2:DescribeSubnets, and ec2:DescribeSecurityGroups) on any resource within the AWS account. 
 ### Question: Under what condition does this policy allow access to VPC-related information? Which AWS region is specified?
 
 ```json
@@ -197,6 +210,14 @@ In summary, the policy grants IAM users the ability to retrieve and list informa
   ]
 }
 ```
+The provided IAM policy grants access to the AWS service Identity and Access Management (IAM).
+This policy denies the ability to create EC2 instances with specific instance types (t2.micro and t2.small) and start existing instances.
+Specific actions allowed by iam:Get* in IAM are:
+iam:GetUser: Allows getting information about a specific IAM user.
+iam:GetGroup: Allows getting information about a specific IAM group.
+iam:GetRole: Allows getting information about a specific IAM role.
+These actions are part of the iam:Get* pattern, which allows IAM users to retrieve information about IAM entities and resources.
+
 
 ### Questions:
 
@@ -213,6 +234,9 @@ In summary, the policy grants IAM users the ability to retrieve and list informa
 - How would the policy restrict the access granted to you by this additional statement?
 - If the policy included both the statement on the left and the statement in question 2, could you terminate an m3.xlarge instance that existed in the account?
 
+The provided IAM policy allows the ec2:* action. This action allows unrestricted access to all EC2 API operations. Therefore, with the additional statement:
+The policy grants full permissions for all EC2 actions.
+The policy with both statements would grant full EC2 access but explicitly deny (question 2 : ec2:RunInstances and ec2:StartInstances) specific instance types from running or starting instances. In this case we would not be able to terminate an m3.xlarge instance if it gets into the restricted instance types that are defined in the policy.
 
 
 # Big Data - Data Visualization With AWS QuickSight
