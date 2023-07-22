@@ -36,6 +36,8 @@ This is our secure string
 ### custom IAM policy
 
 ![CreateIAMPolicy](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/f5622ae2-e1f6-4e5a-a7a0-fa953bf1045d)
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/35f5a156-d249-407d-ace4-7c89908ebf65)
+
 
 
 # QUIZ
