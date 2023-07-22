@@ -2,6 +2,11 @@
 
 # Introducing the Example Social Research Organization
 
+### Architectural diagram of the infrastructure solution 
+
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/5621fad0-0909-4677-83a7-48a03ea660d7)
+
+
 ### Create a new VPC
 
 ![VCP](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/118e10c9-7b6f-4d6c-a034-59d8445e3c99)
