@@ -1,4 +1,43 @@
 # Cloud-BigDataProject
+
+# Introducing the Example Social Research Organization
+
+### Create a new VPC
+
+![VCP](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/118e10c9-7b6f-4d6c-a034-59d8445e3c99)
+![VCP2](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/de492b30-b87c-494a-a384-121210c82a2b)
+
+### Create a private subnets
+
+![Subnet](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/477784dc-7bfd-446a-83a1-bef52897ccd4)
+
+### Set up security Group
+
+![SecurityGroup](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/71a10279-b2e4-4bd2-ae4c-6e7aa3cd4987)
+
+### Create database
+
+![CreateDatabase](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/8f703fc3-8b8c-4d55-aae2-89c3a410ef89)
+![Database](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/0a007fa6-ba60-4fab-99d4-1718bba4cfe0)
+
+mysql://admin:root1234@database-1.co18woxb7lo7.us-east-1.rds.amazonaws.com:3306/database-1
+This is our secure string
+
+![image](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/e1eb7867-f130-4372-9211-b64fcf1d47b9)
+
+### Create EC2
+
+![CreateEC2](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/a5ad7d2a-8995-47fc-92cb-8e499dd717be)
+
+### EC2 security group
+
+![EC2SecurityGroup](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/7b8e5cc6-5dc0-4929-9500-833e2598bee3)
+
+### custom IAM policy
+
+![CreateIAMPolicy](https://github.com/Senhua-Liu/Cloud-BigDataProject/assets/73168837/f5622ae2-e1f6-4e5a-a7a0-fa953bf1045d)
+
+
 # QUIZ
 
 There are some images inside **iam quizz** and **network quizz** folder. Your job is to answer the questions by specifying correct answers.
